@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 2 failed,  3 skipped,  5 passed</span>
+                    <span class="method-stats">10 methods, 3 failed,  3 skipped,  4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -111,6 +111,11 @@
                         <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testNoResultsFoundInSearchField">testNoResultsFoundInSearchField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testUnFollowUserInSearchField">testUnFollowUserInSearchField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content failed suite-Default_Suite -->
                   </li>
                   <li>
@@ -122,17 +127,17 @@
                     <div class="method-list-content skipped suite-Default_Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testFollowUserInSearchField">testFollowUserInSearchField</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testUnFollowUserInSearchField">testUnFollowUserInSearchField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testFollowUserInSearchField">testFollowUserInSearchField</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testUnFollowUserInSearchField">testUnFollowUserInSearchField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testFollowUserInSearchField">testFollowUserInSearchField</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testUnFollowUserInSearchField">testUnFollowUserInSearchField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Default_Suite -->
@@ -157,11 +162,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testShowAllUsersInSearchField">testShowAllUsersInSearchField</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="SearchFieldTests" class="method navigator-link" hash-for-method="testUnFollowUserInSearchField">testUnFollowUserInSearchField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -192,8 +192,8 @@
                   <a name="testFollowUserInSearchField">
                   </a> <!-- testFollowUserInSearchField -->
                   <span class="method-name">testFollowUserInSearchField</span>
-                  <div class="stack-trace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:107)
+                  <div class="stack-trace">java.lang.AssertionError: The user is not Followed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:101)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
@@ -206,12 +206,26 @@
                   <a name="testNoResultsFoundInSearchField">
                   </a> <!-- testNoResultsFoundInSearchField -->
                   <span class="method-name">testNoResultsFoundInSearchField</span>
-                  <div class="stack-trace">java.lang.AssertionError: Users are found! expected [true] but found [false]
-	at SearchFieldTests.testNoResultsFoundInSearchField(SearchFieldTests.java:70)
+                  <div class="stack-trace">java.lang.AssertionError: Users are found! expected [false] but found [true]
+	at SearchFieldTests.testNoResultsFoundInSearchField(SearchFieldTests.java:135)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 ... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUnFollowUserInSearchField">
+                  </a> <!-- testUnFollowUserInSearchField -->
+                  <span class="method-name">testUnFollowUserInSearchField</span>
+                  <div class="stack-trace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -225,49 +239,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testFollowUserInSearchField">
-                  </a> <!-- testFollowUserInSearchField -->
-                  <span class="method-name">testFollowUserInSearchField</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=110.0.5481.104)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [398e10d9d68af618df47dd2e1e796bfe, isElementDisplayed {id=57a64470-46e8-416a-82f7-52e5c0cf2b5f}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.104, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64174/devtoo..., se:cdpVersion: 110.0.5481.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (398e10d9d68af618df47dd2e1e796bfe)] -&gt; xpath: .//a[text()=&apos;Lora&apos;]/parent::div/parent::div//button]
-Session ID: 398e10d9d68af618df47dd2e1e796bfe
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at ISkilloElements.Header.checkFollowButtonState(Header.java:78)
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:104)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testFollowUserInSearchField">
-                  </a> <!-- testFollowUserInSearchField -->
-                  <span class="method-name">testFollowUserInSearchField</span>
-                  <div class="stack-trace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:107)
+                  <a name="testUnFollowUserInSearchField">
+                  </a> <!-- testUnFollowUserInSearchField -->
+                  <span class="method-name">testUnFollowUserInSearchField</span>
+                  <div class="stack-trace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
@@ -277,11 +253,25 @@ Session ID: 398e10d9d68af618df47dd2e1e796bfe
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testFollowUserInSearchField">
-                  </a> <!-- testFollowUserInSearchField -->
-                  <span class="method-name">testFollowUserInSearchField</span>
-                  <div class="stack-trace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:107)
+                  <a name="testUnFollowUserInSearchField">
+                  </a> <!-- testUnFollowUserInSearchField -->
+                  <span class="method-name">testUnFollowUserInSearchField</span>
+                  <div class="stack-trace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUnFollowUserInSearchField">
+                  </a> <!-- testUnFollowUserInSearchField -->
+                  <span class="method-name">testUnFollowUserInSearchField</span>
+                  <div class="stack-trace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
@@ -316,13 +306,6 @@ Session ID: 398e10d9d68af618df47dd2e1e796bfe
                   <a name="testShowAllUsersInSearchField">
                   </a> <!-- testShowAllUsersInSearchField -->
                   <span class="method-name">testShowAllUsersInSearchField</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUnFollowUserInSearchField">
-                  </a> <!-- testUnFollowUserInSearchField -->
-                  <span class="method-name">testUnFollowUserInSearchField</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -390,43 +373,43 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testShowAllUsersInSearchField')
 data.setCell(0, 2, 'SearchFieldTests')
-data.setCell(0, 3, 24422);
+data.setCell(0, 3, 23529);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testNoResultsFoundInSearchField')
 data.setCell(1, 2, 'SearchFieldTests')
-data.setCell(1, 3, 12077);
+data.setCell(1, 3, 12139);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testSearchFieldOnProfilePage')
 data.setCell(2, 2, 'SearchFieldTests')
-data.setCell(2, 3, 10266);
+data.setCell(2, 3, 9653);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testFollowUserInSearchField')
+data.setCell(3, 1, 'testUnFollowUserInSearchField')
 data.setCell(3, 2, 'SearchFieldTests')
-data.setCell(3, 3, 8970);
+data.setCell(3, 3, 8716);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testUnFollowUserInSearchField')
+data.setCell(4, 1, 'testFollowUserInSearchField')
 data.setCell(4, 2, 'SearchFieldTests')
-data.setCell(4, 3, 8850);
+data.setCell(4, 3, 8652);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'testSearchFieldFindUserOnHomePage')
 data.setCell(5, 2, 'SearchFieldTests')
-data.setCell(5, 3, 8767);
+data.setCell(5, 3, 8514);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testFollowUserInSearchField')
+data.setCell(6, 1, 'testUnFollowUserInSearchField')
 data.setCell(6, 2, 'SearchFieldTests')
-data.setCell(6, 3, 8323);
+data.setCell(6, 3, 8324);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testFollowUserInSearchField')
+data.setCell(7, 1, 'testUnFollowUserInSearchField')
 data.setCell(7, 2, 'SearchFieldTests')
-data.setCell(7, 3, 8234);
+data.setCell(7, 3, 8285);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testFollowUserInSearchField')
+data.setCell(8, 1, 'testUnFollowUserInSearchField')
 data.setCell(8, 2, 'SearchFieldTests')
-data.setCell(8, 3, 7277);
+data.setCell(8, 3, 8121);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'testVisibilityOfSearchBarAfterLogin')
 data.setCell(9, 2, 'SearchFieldTests')
-data.setCell(9, 3, 1599);
+data.setCell(9, 3, 1609);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
@@ -464,127 +447,129 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">6419 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testFollowUserInSearchField</span>
-                <span class="method-start">9043 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownTest([TestResult name=testFollowUserInSearchField status=SKIP method=SearchFieldTests.testFollowUserInSea...)</span>
-                <span class="method-start">18014 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpTest</span>
-                <span class="method-start">18695 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testFollowUserInSearchField</span>
-                <span class="method-start">20040 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownTest([TestResult name=testFollowUserInSearchField status=SKIP method=SearchFieldTests.testFollowUserInSea...)</span>
-                <span class="method-start">27318 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpTest</span>
-                <span class="method-start">27972 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testFollowUserInSearchField</span>
-                <span class="method-start">28817 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownTest([TestResult name=testFollowUserInSearchField status=SKIP method=SearchFieldTests.testFollowUserInSea...)</span>
-                <span class="method-start">37140 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpTest</span>
-                <span class="method-start">37788 ms</span>
+                <span class="method-start">2248 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testFollowUserInSearchField</span>
-                <span class="method-start">39090 ms</span>
+                <span class="method-start">4031 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=testFollowUserInSearchField status=FAILURE method=SearchFieldTests.testFollowUserIn...)</span>
-                <span class="method-start">47330 ms</span>
+                <span class="method-start">12690 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">48222 ms</span>
+                <span class="method-start">13690 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testNoResultsFoundInSearchField</span>
-                <span class="method-start">49498 ms</span>
+                <span class="method-start">14994 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=testNoResultsFoundInSearchField status=FAILURE method=SearchFieldTests.testNoResult...)</span>
-                <span class="method-start">61580 ms</span>
+                <span class="method-start">27134 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">62720 ms</span>
+                <span class="method-start">28076 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testSearchFieldFindUserOnHomePage</span>
-                <span class="method-start">64173 ms</span>
+                <span class="method-start">29493 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=testSearchFieldFindUserOnHomePage status=SUCCESS method=SearchFieldTests.testSearch...)</span>
-                <span class="method-start">72941 ms</span>
+                <span class="method-start">38007 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">73590 ms</span>
+                <span class="method-start">38752 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testSearchFieldOnProfilePage</span>
-                <span class="method-start">74992 ms</span>
+                <span class="method-start">40126 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=testSearchFieldOnProfilePage status=SUCCESS method=SearchFieldTests.testSearchField...)</span>
-                <span class="method-start">85259 ms</span>
+                <span class="method-start">49779 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">85956 ms</span>
+                <span class="method-start">50435 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testShowAllUsersInSearchField</span>
-                <span class="method-start">87472 ms</span>
+                <span class="method-start">51299 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=testShowAllUsersInSearchField status=SUCCESS method=SearchFieldTests.testShowAllUse...)</span>
-                <span class="method-start">111895 ms</span>
+                <span class="method-start">74828 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">112589 ms</span>
+                <span class="method-start">75560 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUnFollowUserInSearchField</span>
-                <span class="method-start">113888 ms</span>
+                <span class="method-start">77014 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDownTest([TestResult name=testUnFollowUserInSearchField status=SUCCESS method=SearchFieldTests.testUnFollowUs...)</span>
-                <span class="method-start">122738 ms</span>
+                <span class="method-name">tearDownTest([TestResult name=testUnFollowUserInSearchField status=SKIP method=SearchFieldTests.testUnFollowUserI...)</span>
+                <span class="method-start">85300 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">123558 ms</span>
+                <span class="method-start">85957 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUnFollowUserInSearchField</span>
+                <span class="method-start">86748 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=testUnFollowUserInSearchField status=SKIP method=SearchFieldTests.testUnFollowUserI...)</span>
+                <span class="method-start">95464 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">96121 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testUnFollowUserInSearchField</span>
+                <span class="method-start">96891 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=testUnFollowUserInSearchField status=SKIP method=SearchFieldTests.testUnFollowUserI...)</span>
+                <span class="method-start">105216 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">105880 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testUnFollowUserInSearchField</span>
+                <span class="method-start">106648 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownTest([TestResult name=testUnFollowUserInSearchField status=FAILURE method=SearchFieldTests.testUnFollowUs...)</span>
+                <span class="method-start">114770 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpTest</span>
+                <span class="method-start">115651 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testVisibilityOfSearchBarAfterLogin</span>
-                <span class="method-start">124440 ms</span>
+                <span class="method-start">116929 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownTest([TestResult name=testVisibilityOfSearchBarAfterLogin status=SUCCESS method=SearchFieldTests.testVisi...)</span>
-                <span class="method-start">126040 ms</span>
+                <span class="method-start">118538 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

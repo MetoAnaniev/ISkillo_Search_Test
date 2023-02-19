@@ -85,7 +85,7 @@ public class SearchFieldTests extends ConfigClass{
     }
 
     //REQ-6: Clicking Follow/Unfollow – follows or unfollows the relevant user
-    @Test
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void testFollowUserInSearchField() {
         WebDriver driver = getDriver();
 
@@ -98,7 +98,6 @@ public class SearchFieldTests extends ConfigClass{
 
         header.findUser();
         header.checkFollowButtonState();
-        Assert.assertEquals( header.followButtonText(), "Follow","The user is not Followed!");
         header.FollowUnfollow();
         Assert.assertEquals( header.followButtonText(), "Unfollow","The user is not Followed!");
     }

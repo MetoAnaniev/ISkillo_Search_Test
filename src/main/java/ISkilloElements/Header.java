@@ -76,9 +76,9 @@ public class Header {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement followUnfollowButton =driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button"));
         wait.until(ExpectedConditions.visibilityOf(followUnfollowButton));
-        String buttonState = driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button")).getText();
+        String actualButtonText = driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button")).getText();
         String buttonText = "Follow";
-            if (buttonState.equals(buttonText)) {
+            if (actualButtonText.equals(buttonText)) {
                 return true;
             } else {
                 wait.until(ExpectedConditions.elementToBeClickable(followUnfollowButton));
@@ -89,9 +89,9 @@ public class Header {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement followUnfollowButton =driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button"));
 
-        String buttonState = driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button")).getText();
+        String actualButtonText = driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button")).getText();
         String buttonText = "Unfollow";
-        if (buttonState.equals(buttonText)) {
+        if (actualButtonText.equals(buttonText)) {
             return true;
         } else {
             wait.until(ExpectedConditions.elementToBeClickable(followUnfollowButton));

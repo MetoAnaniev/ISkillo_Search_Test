@@ -9,68 +9,49 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default Suite</th></tr>
-<tr><td><a href="#t0">ISkillo_Search_Test</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">3</td><td class="num attn">2</td><td class="num">120 298</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ISkillo_Search_Test</a></td><td class="num">4</td><td class="num">0</td><td class="num attn">3</td><td class="num attn">3</td><td class="num">116 968</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ISkillo_Search_Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">SearchFieldTests</td><td><a href="#m0">testFollowUserInSearchField</a></td><td rowspan="1">1676804124733</td><td rowspan="1">8234</td></tr><tr class="failedeven"><td><a href="#m1">testNoResultsFoundInSearchField</a></td><td rowspan="1">1676804135141</td><td rowspan="1">12077</td></tr><tr><th colspan="4">ISkillo_Search_Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="3">SearchFieldTests</td><td><a href="#m2">testFollowUserInSearchField</a></td><td rowspan="3">1676804094686</td><td rowspan="3">8970</td></tr><tr class="retriedeven"><td><a href="#m3">testFollowUserInSearchField</a></td></tr><tr class="retriedeven"><td><a href="#m4">testFollowUserInSearchField</a></td></tr><tr><th colspan="4">ISkillo_Search_Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">SearchFieldTests</td><td><a href="#m5">testSearchFieldFindUserOnHomePage</a></td><td rowspan="1">1676804149816</td><td rowspan="1">8767</td></tr><tr class="passedeven"><td><a href="#m6">testSearchFieldOnProfilePage</a></td><td rowspan="1">1676804160635</td><td rowspan="1">10266</td></tr><tr class="passedeven"><td><a href="#m7">testShowAllUsersInSearchField</a></td><td rowspan="1">1676804173115</td><td rowspan="1">24422</td></tr><tr class="passedeven"><td><a href="#m8">testUnFollowUserInSearchField</a></td><td rowspan="1">1676804199531</td><td rowspan="1">8850</td></tr><tr class="passedeven"><td><a href="#m9">testVisibilityOfSearchBarAfterLogin</a></td><td rowspan="1">1676804210083</td><td rowspan="1">1599</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ISkillo_Search_Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">SearchFieldTests</td><td><a href="#m0">testFollowUserInSearchField</a></td><td rowspan="1">1676808685222</td><td rowspan="1">8652</td></tr><tr class="failedeven"><td><a href="#m1">testNoResultsFoundInSearchField</a></td><td rowspan="1">1676808696185</td><td rowspan="1">12139</td></tr><tr class="failedeven"><td><a href="#m2">testUnFollowUserInSearchField</a></td><td rowspan="1">1676808787839</td><td rowspan="1">8121</td></tr><tr><th colspan="4">ISkillo_Search_Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="3">SearchFieldTests</td><td><a href="#m3">testUnFollowUserInSearchField</a></td><td rowspan="3">1676808767939</td><td rowspan="3">8716</td></tr><tr class="retriedeven"><td><a href="#m4">testUnFollowUserInSearchField</a></td></tr><tr class="retriedeven"><td><a href="#m5">testUnFollowUserInSearchField</a></td></tr><tr><th colspan="4">ISkillo_Search_Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">SearchFieldTests</td><td><a href="#m6">testSearchFieldFindUserOnHomePage</a></td><td rowspan="1">1676808710684</td><td rowspan="1">8514</td></tr><tr class="passedeven"><td><a href="#m7">testSearchFieldOnProfilePage</a></td><td rowspan="1">1676808721317</td><td rowspan="1">9653</td></tr><tr class="passedeven"><td><a href="#m8">testShowAllUsersInSearchField</a></td><td rowspan="1">1676808732490</td><td rowspan="1">23529</td></tr><tr class="passedeven"><td><a href="#m9">testVisibilityOfSearchBarAfterLogin</a></td><td rowspan="1">1676808798120</td><td rowspan="1">1609</td></tr></tbody>
 </table>
-<h2>ISkillo_Search_Test</h2><h3 id="m0">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:107)
+<h2>ISkillo_Search_Test</h2><h3 id="m0">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Followed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:101)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">SearchFieldTests#testNoResultsFoundInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Users are found! expected [true] but found [false]
-	at SearchFieldTests.testNoResultsFoundInSearchField(SearchFieldTests.java:70)
+<h3 id="m1">SearchFieldTests#testNoResultsFoundInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Users are found! expected [false] but found [true]
+	at SearchFieldTests.testNoResultsFoundInSearchField(SearchFieldTests.java:135)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 ... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=110.0.5481.104)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
-Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [398e10d9d68af618df47dd2e1e796bfe, isElementDisplayed {id=57a64470-46e8-416a-82f7-52e5c0cf2b5f}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.104, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64174/devtoo..., se:cdpVersion: 110.0.5481.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (398e10d9d68af618df47dd2e1e796bfe)] -&gt; xpath: .//a[text()=&apos;Lora&apos;]/parent::div/parent::div//button]
-Session ID: 398e10d9d68af618df47dd2e1e796bfe
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	at ISkilloElements.Header.checkFollowButtonState(Header.java:78)
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:104)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:107)
+<h3 id="m2">SearchFieldTests#testUnFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
-	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:107)
+<h3 id="m3">SearchFieldTests#testUnFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">SearchFieldTests#testSearchFieldFindUserOnHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">SearchFieldTests#testSearchFieldOnProfilePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">SearchFieldTests#testShowAllUsersInSearchField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">SearchFieldTests#testUnFollowUserInSearchField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">SearchFieldTests#testUnFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">SearchFieldTests#testUnFollowUserInSearchField</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+	at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">SearchFieldTests#testSearchFieldFindUserOnHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">SearchFieldTests#testSearchFieldOnProfilePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">SearchFieldTests#testShowAllUsersInSearchField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m9">SearchFieldTests#testVisibilityOfSearchBarAfterLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

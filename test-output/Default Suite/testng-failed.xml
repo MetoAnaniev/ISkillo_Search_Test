@@ -5,11 +5,12 @@
     <classes>
       <class name="SearchFieldTests">
         <methods>
-          <include name="testNoResultsFoundInSearchField"/>
+          <include name="testUnFollowUserInSearchField"/>
           <include name="setupTestSuite"/>
+          <include name="testNoResultsFoundInSearchField"/>
           <include name="tearDownTest"/>
-          <include name="testFollowUserInSearchField"/>
           <include name="setUpTest"/>
+          <include name="testFollowUserInSearchField"/>
         </methods>
       </class> <!-- SearchFieldTests -->
     </classes>

@@ -6,23 +6,13 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import javax.lang.model.element.Element;
-
+       // Tests are based on Software Requirements Specification
+       //iSkillo project
+       //Version 3.0
+       //section - 3.10 "Search field"
 public class SearchFieldTests extends ConfigClass{
 
-    @Test (retryAnalyzer = RetryAnalyzer.class)
-    public void testSearchFieldFindUserOnHomePage() {
-        WebDriver driver = getDriver();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.logIn();
-        LoggedHomePage loggedHomePage = new LoggedHomePage(driver);
-        Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
-
-        Header header = new Header(driver);
-        header.findUser();
-        Assert.assertEquals(header.userText(),"Lora");
-
-    }
-
+    //REQ-1.1: The search field is available only for the logged users.
     @Test
     public void testVisibilityOfSearchBarAfterLogin() {
         WebDriver driver = getDriver();
@@ -33,6 +23,7 @@ public class SearchFieldTests extends ConfigClass{
         Assert.assertTrue(header.searchBar());
     }
 
+    //REQ-1.2: The search field is available only for the logged users.
    /* @Test
     public void testNotVisibleSearchFieldBeforeLogIn() {
         WebDriver driver = getDriver();
@@ -43,6 +34,8 @@ public class SearchFieldTests extends ConfigClass{
 
     }*/
 
+
+    //REQ-2: Clicking in the search field and pressing space shows all available users.
     @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testShowAllUsersInSearchField() {
         WebDriver driver = getDriver();
@@ -57,18 +50,22 @@ public class SearchFieldTests extends ConfigClass{
 
     }
 
-    @Test
-    public void testNoResultsFoundInSearchField() {
-        WebDriver driver = getDriver();
+    //REQ-3: Search field is working using filter as you type functionality.
+    //REQ-4: The results shown contains the profile picture, the name of the user and Follow/Unfollow button.
+    //REQ-5: Clicking on the profile picture or name opens the user’s profile page.
+    @Test (retryAnalyzer = RetryAnalyzer.class)
+    public void testSearchFieldFindUserOnHomePage() {
+               WebDriver driver = getDriver();
+               LoginPage loginPage = new LoginPage(driver);
+               loginPage.logIn();
+               LoggedHomePage loggedHomePage = new LoggedHomePage(driver);
+               Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
 
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.logIn();
-        LoggedHomePage loggedHomePage = new LoggedHomePage(driver);
-        Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
-        Header header = new Header(driver);
-        header.randomCredentialsUsersInSearchBar();
-        Assert.assertTrue(!header.dropDownContainer(),"Users are found!");
-    }
+               Header header = new Header(driver);
+               header.findUser();
+               Assert.assertEquals(header.userText(),"Lora");
+
+           }
 
     @Test (retryAnalyzer = RetryAnalyzer.class)
     public void testSearchFieldOnProfilePage() {
@@ -85,11 +82,10 @@ public class SearchFieldTests extends ConfigClass{
 
         UserProfilePage userProfilePage = new UserProfilePage(driver);
         Assert.assertTrue(userProfilePage.isUrlLoaded(), "The Home URL is not correct!");
-
-
     }
 
-    @Test (retryAnalyzer = RetryAnalyzer.class)
+    //REQ-6: Clicking Follow/Unfollow – follows or unfollows the relevant user
+    @Test
     public void testFollowUserInSearchField() {
         WebDriver driver = getDriver();
 
@@ -102,7 +98,7 @@ public class SearchFieldTests extends ConfigClass{
 
         header.findUser();
         header.checkFollowButtonState();
-        Assert.assertTrue(header.checkFollowButtonState());
+        Assert.assertEquals( header.followButtonText(), "Follow","The user is not Followed!");
         header.FollowUnfollow();
         Assert.assertEquals( header.followButtonText(), "Unfollow","The user is not Followed!");
     }
@@ -124,4 +120,18 @@ public class SearchFieldTests extends ConfigClass{
         header.FollowUnfollow();
         Assert.assertEquals( header.followButtonText(), "Follow","The user is not Unfollowed!");
     }
+
+    //REQ-9: If no results are found nothing is shown.
+    @Test
+    public void testNoResultsFoundInSearchField() {
+               WebDriver driver = getDriver();
+
+               LoginPage loginPage = new LoginPage(driver);
+               loginPage.logIn();
+               LoggedHomePage loggedHomePage = new LoggedHomePage(driver);
+               Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
+               Header header = new Header(driver);
+               header.randomCredentialsUsersInSearchBar();
+               Assert.assertFalse(header.dropDownContainer(),"Users are found!");
+           }
 }

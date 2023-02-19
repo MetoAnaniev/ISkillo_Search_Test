@@ -109,7 +109,7 @@ public class Header {
 
         return userText.getText();
     }
-    public WebElement searchField = driver.findElement(By.id("search-bar");
+   // public WebElement searchField = driver.findElement(By.id("search-bar");
     public boolean searchBar(){return(driver.findElement(By.id("search-bar")).isDisplayed());}
     public boolean dropDownContainer(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

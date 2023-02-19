@@ -5,13 +5,18 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.IAnnotationTransformer;
+import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.ITestAnnotation;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.time.Duration;
 
 public class ConfigClass {
@@ -38,6 +43,7 @@ public class ConfigClass {
         this.driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
 
     }
 
@@ -78,6 +84,22 @@ public class ConfigClass {
     private void quitDriver() {
         if (this.driver != null) {
             this.driver.quit();
+        }
+    }
+
+    public static class RetryAnalyzer implements IRetryAnalyzer {
+
+        int retryAttemptsCounter = 0;
+        int maxRetryLimit = 3;
+
+        public boolean retry(ITestResult result) {
+            if (!result.isSuccess()) {
+                if(retryAttemptsCounter < maxRetryLimit){
+                    retryAttemptsCounter++;
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

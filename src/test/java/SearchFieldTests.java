@@ -1,33 +1,19 @@
-import ISkilloElements.Header;
-import ISkilloElements.LoggedHomePage;
-import ISkilloElements.LoginPage;
-import ISkilloElements.UserProfilePage;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import ISkilloElements.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
-
-import static org.apache.commons.io.FileUtils.cleanDirectory;
+import javax.lang.model.element.Element;
 
 public class SearchFieldTests extends ConfigClass{
 
-
-    @Test (invocationCount = 2)
-    public void testSearchFieldOnHomePage() {
+    @Test (retryAnalyzer = RetryAnalyzer.class)
+    public void testSearchFieldFindUserOnHomePage() {
         WebDriver driver = getDriver();
-
         LoginPage loginPage = new LoginPage(driver);
         loginPage.logIn();
-
         LoggedHomePage loggedHomePage = new LoggedHomePage(driver);
         Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
 
@@ -37,7 +23,54 @@ public class SearchFieldTests extends ConfigClass{
 
     }
 
-    @Test (invocationCount = 2)
+    @Test
+    public void testVisibilityOfSearchBarAfterLogin() {
+        WebDriver driver = getDriver();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.logIn();
+
+        Header header = new Header(driver);
+        Assert.assertTrue(header.searchBar());
+    }
+
+   /* @Test
+    public void testNotVisibleSearchFieldBeforeLogIn() {
+        WebDriver driver = getDriver();
+        HomePage homePage = new HomePage(driver);
+        homePage.navigateTo();
+        Header header = new Header(driver);
+        Assert.assertTrue(ExpectedConditions.invisibilityOf(header.searchField));
+
+    }*/
+
+    @Test(retryAnalyzer = RetryAnalyzer.class)
+    public void testShowAllUsersInSearchField() {
+        WebDriver driver = getDriver();
+
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.logIn();
+        LoggedHomePage loggedHomePage = new LoggedHomePage(driver);
+        Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
+        Header header = new Header(driver);
+        header.allUsersInSearchBar();
+        Assert.assertTrue(header.dropDownContainer());
+
+    }
+
+    @Test
+    public void testNoResultsFoundInSearchField() {
+        WebDriver driver = getDriver();
+
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.logIn();
+        LoggedHomePage loggedHomePage = new LoggedHomePage(driver);
+        Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
+        Header header = new Header(driver);
+        header.randomCredentialsUsersInSearchBar();
+        Assert.assertTrue(!header.dropDownContainer(),"Users are found!");
+    }
+
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void testSearchFieldOnProfilePage() {
         WebDriver driver = getDriver();
 
@@ -56,7 +89,7 @@ public class SearchFieldTests extends ConfigClass{
 
     }
 
-    @Test (invocationCount = 2)
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void testFollowUserInSearchField() {
         WebDriver driver = getDriver();
 
@@ -74,7 +107,7 @@ public class SearchFieldTests extends ConfigClass{
         Assert.assertEquals( header.followButtonText(), "Unfollow","The user is not Followed!");
     }
 
-    @Test (invocationCount = 2)
+    @Test (retryAnalyzer = RetryAnalyzer.class)
     public void testUnFollowUserInSearchField() {
         WebDriver driver = getDriver();
 

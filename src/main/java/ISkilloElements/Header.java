@@ -10,7 +10,8 @@ import java.time.Duration;
 
 public class Header {
 
-    private final WebDriver driver;
+    private WebDriver driver;
+    final String user = "Lora";
 
     public Header(WebDriver driver) {
 
@@ -35,28 +36,29 @@ public class Header {
         profileLink.click();
     }
 
-    public void clickSearchBar () {
+    public void allUsersInSearchBar() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-bar")));
+        searchBar.sendKeys(" ");
+    }
+
+    public void randomCredentialsUsersInSearchBar() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-bar")));
+        searchBar.sendKeys("NyIegk48_if");
     }
 
     public void findUser(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-bar")));
-        searchBar.sendKeys("L");
-        searchBar.sendKeys("o");
-        searchBar.sendKeys("ra");
-
-
+        searchBar.sendKeys(user);
         WebElement findUser = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Lora']")));
-        //wait.until(ExpectedConditions.visibilityOf(findUser));
+
     }
     public void findUserAndSelect(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-bar")));
-        searchBar.sendKeys("L");
-        searchBar.sendKeys("o");
-        searchBar.sendKeys("ra");
+        searchBar.sendKeys(user);
 
 
         WebElement findUser = driver.findElement(By.xpath("//a[text()='Lora']"));
@@ -107,6 +109,14 @@ public class Header {
 
         return userText.getText();
     }
+    public WebElement searchField = driver.findElement(By.id("search-bar");
+    public boolean searchBar(){return(driver.findElement(By.id("search-bar")).isDisplayed());}
+    public boolean dropDownContainer(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        return(driver.findElement(By.className("dropdown-container")).isDisplayed());
+    }
+
+
 
 
 

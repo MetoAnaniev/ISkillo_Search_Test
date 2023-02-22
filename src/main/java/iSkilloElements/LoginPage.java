@@ -41,6 +41,7 @@ public class LoginPage {
     }
 
     public void logIn(String username, String password) {
+        navigateTo();
         usernameInput(username);
         passwordInput(password);
         clickSignInButton();

@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.nio.charset.Charset;
 import java.time.Duration;
+import java.util.Random;
 
 public class Header {
 
@@ -45,7 +47,7 @@ public class Header {
     public void randomCredentialsUsersInSearchBar() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-bar")));
-        searchBar.sendKeys("NyIegk48_if");
+        searchBar.sendKeys(generatingRandomString());
     }
 
     public void findUser(){
@@ -116,7 +118,12 @@ public class Header {
         return(driver.findElement(By.className("dropdown-container")).isDisplayed());
     }
 
-
+    public String generatingRandomString() {
+        byte[] array = new byte[7]; // length is bounded by 7
+        new Random().nextBytes(array);
+        String generatedString = new String(array, Charset.forName("UTF-8"));
+        return generatedString;
+    }
 
 
 

@@ -24,7 +24,6 @@ public class SearchFieldTests extends ConfigClass{
     public void testVisibilityOfSearchBarAfterLogin(String username, String password) {
         WebDriver driver = getDriver();
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.navigateTo();
         loginPage.logIn(username,password);
 
         Header header = new Header(driver);
@@ -34,7 +33,7 @@ public class SearchFieldTests extends ConfigClass{
 
     //REQ-2: Clicking in the search field and pressing space shows all available users.
     @Test(retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testShowAllUsersInSearchField(String password, String username) {
+    public void testShowAllUsersInSearchField(String username, String password) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -51,7 +50,7 @@ public class SearchFieldTests extends ConfigClass{
     //REQ-4: The results shown contains the profile picture, the name of the user and Follow/Unfollow button.
     //REQ-5: Clicking on the profile picture or name opens the user’s profile page.
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testSearchFieldFindUserOnHomePage(String password, String username) {
+    public void testSearchFieldFindUserOnHomePage(String username, String password) {
                WebDriver driver = getDriver();
                LoginPage loginPage = new LoginPage(driver);
                loginPage.logIn(username,password);
@@ -65,7 +64,7 @@ public class SearchFieldTests extends ConfigClass{
            }
 
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testSearchFieldOnProfilePage(String password, String username) {
+    public void testSearchFieldOnProfilePage(String username, String password) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -83,7 +82,7 @@ public class SearchFieldTests extends ConfigClass{
 
     //REQ-6: Clicking Follow/Unfollow – follows or unfollows the relevant user
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testFollowUserInSearchField(String password, String username) {
+    public void testFollowUserInSearchField(String username, String password) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -100,7 +99,7 @@ public class SearchFieldTests extends ConfigClass{
     }
 
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testUnFollowUserInSearchField(String password, String username) {
+    public void testUnFollowUserInSearchField(String username, String password) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -119,7 +118,7 @@ public class SearchFieldTests extends ConfigClass{
 
     //REQ-9: If no results are found nothing is shown.
     @Test(dataProvider = "getUsers")
-    public void testNoResultsFoundInSearchField(String password, String username) {
+    public void testNoResultsFoundInSearchField(String username, String password) {
                WebDriver driver = getDriver();
 
                LoginPage loginPage = new LoginPage(driver);

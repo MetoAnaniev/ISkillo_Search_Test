@@ -1,4 +1,4 @@
-package ISkilloElements;
+package iSkilloElements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

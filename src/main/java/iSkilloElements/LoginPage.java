@@ -1,4 +1,4 @@
-package ISkilloElements;
+package iSkilloElements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,13 +21,13 @@ public class LoginPage {
         this.driver.get(LoginPage.PAGE_URL);
     }
 
-    public void usernameInput() {
+    public void usernameInput(String username) {
         WebElement userNameField = driver.findElement(By.id("defaultLoginFormUsername"));
-        userNameField.sendKeys("m_puh");
+        userNameField.sendKeys(username);
     }
-    public void passwordInput() {
+    public void passwordInput(String password) {
         WebElement passwordField = driver.findElement(By.id("defaultLoginFormPassword"));
-        passwordField.sendKeys("metodi86");
+        passwordField.sendKeys(password);
     }
     public void clickSignInButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -40,11 +40,10 @@ public class LoginPage {
         return wait.until(ExpectedConditions.urlToBe(LoginPage.PAGE_URL));
     }
 
-    public void logIn() {
-        navigateTo();
-        this.usernameInput();
-        this.passwordInput();
-        this.clickSignInButton();
+    public void logIn(String username, String password) {
+        usernameInput(username);
+        passwordInput(password);
+        clickSignInButton();
     }
 
 

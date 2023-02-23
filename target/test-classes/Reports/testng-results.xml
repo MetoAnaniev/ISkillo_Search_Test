@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results retried="1" ignored="0" total="8" passed="5" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-23T14:52:50 EET" name="Default Suite" finished-at="2023-02-23T14:54:35 EET" duration-ms="105658">
+    <groups>
+    </groups>
+    <test started-at="2023-02-23T14:52:50 EET" name="ISkillo_Search_Test" finished-at="2023-02-23T14:54:35 EET" duration-ms="105658">
+      <class name="SearchFieldTests">
+        <test-method is-config="true" signature="setupTestSuite()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:52:49 EET" name="setupTestSuite" finished-at="2023-02-23T14:52:50 EET" duration-ms="1301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupTestSuite -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:52:50 EET" name="setUpTest" finished-at="2023-02-23T14:52:52 EET" duration-ms="1703" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testFollowUserInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:52:52 EET" name="testFollowUserInSearchField" data-provider="getUsers" finished-at="2023-02-23T14:53:01 EET" duration-ms="9052" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFollowUserInSearchField -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:01 EET" name="tearDownTest" finished-at="2023-02-23T14:53:01 EET" duration-ms="651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testFollowUserInSearchField status=SUCCESS method=SearchFieldTests.testFollowUserInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:01 EET" name="setUpTest" finished-at="2023-02-23T14:53:02 EET" duration-ms="796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testNoResultsFoundInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:02 EET" name="testNoResultsFoundInSearchField" data-provider="getUsers" finished-at="2023-02-23T14:53:25 EET" duration-ms="23012" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".dropdown\-container"}
+  (Session info: chrome=110.0.5481.104)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [58ea1c187f5e01827c2d72b04175772a, findElement {using=class name, value=dropdown-container}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.104, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56646}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56646/devtoo..., se:cdpVersion: 110.0.5481.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 58ea1c187f5e01827c2d72b04175772a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".dropdown\-container"}
+  (Session info: chrome=110.0.5481.104)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [58ea1c187f5e01827c2d72b04175772a, findElement {using=class name, value=dropdown-container}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.104, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56646}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56646/devtoo..., se:cdpVersion: 110.0.5481.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 58ea1c187f5e01827c2d72b04175772a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at iSkillo.Elements.pageObject.Header.dropDownContainer(Header.java:118)
+at SearchFieldTests.testNoResultsFoundInSearchField(SearchFieldTests.java:131)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNoResultsFoundInSearchField -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:25 EET" name="tearDownTest" finished-at="2023-02-23T14:53:26 EET" duration-ms="849" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testNoResultsFoundInSearchField status=FAILURE method=SearchFieldTests.testNoResultsFoundInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:26 EET" name="setUpTest" finished-at="2023-02-23T14:53:27 EET" duration-ms="1278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testSearchFieldFindUserOnHomePage(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:27 EET" name="testSearchFieldFindUserOnHomePage" data-provider="getUsers" finished-at="2023-02-23T14:53:34 EET" duration-ms="6662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchFieldFindUserOnHomePage -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:34 EET" name="tearDownTest" finished-at="2023-02-23T14:53:35 EET" duration-ms="662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSearchFieldFindUserOnHomePage status=SUCCESS method=SearchFieldTests.testSearchFieldFindUserOnHomePage(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:35 EET" name="setUpTest" finished-at="2023-02-23T14:53:35 EET" duration-ms="794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testSearchFieldOnProfilePage(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:35 EET" name="testSearchFieldOnProfilePage" data-provider="getUsers" finished-at="2023-02-23T14:53:46 EET" duration-ms="10252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchFieldOnProfilePage -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:46 EET" name="tearDownTest" finished-at="2023-02-23T14:53:46 EET" duration-ms="666" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSearchFieldOnProfilePage status=SUCCESS method=SearchFieldTests.testSearchFieldOnProfilePage(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:46 EET" name="setUpTest" finished-at="2023-02-23T14:53:47 EET" duration-ms="808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testShowAllUsersInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:53:47 EET" name="testShowAllUsersInSearchField" data-provider="getUsers" finished-at="2023-02-23T14:54:11 EET" duration-ms="24268" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowAllUsersInSearchField -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:11 EET" name="tearDownTest" finished-at="2023-02-23T14:54:12 EET" duration-ms="662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testShowAllUsersInSearchField status=SUCCESS method=SearchFieldTests.testShowAllUsersInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:12 EET" name="setUpTest" finished-at="2023-02-23T14:54:13 EET" duration-ms="770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method retried="true" signature="testUnFollowUserInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:13 EET" name="testUnFollowUserInSearchField" data-provider="getUsers" finished-at="2023-02-23T14:54:21 EET" duration-ms="8624" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The user is not Unfollowed! expected [Follow] but found [Unfollow]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:117)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUnFollowUserInSearchField -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:21 EET" name="tearDownTest" finished-at="2023-02-23T14:54:22 EET" duration-ms="680" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUnFollowUserInSearchField status=SKIP method=SearchFieldTests.testUnFollowUserInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:22 EET" name="setUpTest" finished-at="2023-02-23T14:54:23 EET" duration-ms="764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testUnFollowUserInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:23 EET" name="testUnFollowUserInSearchField" data-provider="getUsers" finished-at="2023-02-23T14:54:31 EET" duration-ms="8517" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The user is not Unfollowed! expected [Follow] but found [Unfollow]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The user is not Unfollowed! expected [Follow] but found [Unfollow]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at SearchFieldTests.testUnFollowUserInSearchField(SearchFieldTests.java:117)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUnFollowUserInSearchField -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:31 EET" name="tearDownTest" finished-at="2023-02-23T14:54:32 EET" duration-ms="832" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testUnFollowUserInSearchField status=FAILURE method=SearchFieldTests.testUnFollowUserInSearchField(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:32 EET" name="setUpTest" finished-at="2023-02-23T14:54:33 EET" duration-ms="914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testVisibilityOfSearchBarAfterLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:33 EET" name="testVisibilityOfSearchBarAfterLogin" data-provider="getUsers" finished-at="2023-02-23T14:54:35 EET" duration-ms="1742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[m_puh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[metodi86]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Lora]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVisibilityOfSearchBarAfterLogin -->
+        <test-method is-config="true" signature="tearDownTest(org.testng.ITestResult)[pri:0, instance:SearchFieldTests@d29f28]" started-at="2023-02-23T14:54:35 EET" name="tearDownTest" finished-at="2023-02-23T14:54:35 EET" duration-ms="644" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testVisibilityOfSearchBarAfterLogin status=SUCCESS method=SearchFieldTests.testVisibilityOfSearchBarAfterLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:SearchFieldTests@d29f28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- SearchFieldTests -->
+    </test> <!-- ISkillo_Search_Test -->
+  </suite> <!-- Default Suite -->
+</testng-results>

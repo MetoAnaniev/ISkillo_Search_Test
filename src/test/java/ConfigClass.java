@@ -90,7 +90,7 @@ public class ConfigClass {
     public static class RetryAnalyzer implements IRetryAnalyzer {
 
         int retryAttemptsCounter = 0;
-        int maxRetryLimit = 3;
+        int maxRetryLimit = 1;
 
         public boolean retry(ITestResult result) {
             if (!result.isSuccess()) {

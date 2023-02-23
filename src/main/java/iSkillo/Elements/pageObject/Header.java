@@ -12,8 +12,7 @@ import java.util.Random;
 
 public class Header {
 
-    private WebDriver driver;
-    final String user = "Lora";
+    private final WebDriver driver;
 
     public Header(WebDriver driver) {
 
@@ -50,35 +49,35 @@ public class Header {
         searchBar.sendKeys(generatingRandomString());
     }
 
-    public void findUser(){
+    public void findUser(String user){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-bar")));
         searchBar.sendKeys(user);
-        WebElement findUser = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Lora']")));
+        WebElement findUser = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(user)));
 
     }
-    public void findUserAndSelect(){
+    public void findUserAndSelect(String user){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement searchBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-bar")));
         searchBar.sendKeys(user);
 
-
-        WebElement findUser = driver.findElement(By.xpath("//a[text()='Lora']"));
-        wait.until(ExpectedConditions.elementToBeClickable(findUser));
+        WebElement findUser =  wait.until(ExpectedConditions.elementToBeClickable(By.linkText(user)));
         findUser.click();
     }
 
-    public void FollowUnfollow() {
+    public void followUnfollow(String user) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        WebElement followUnfollowButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button")));
+        WebElement followUnfollowButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user))));
         followUnfollowButton.click();
 
     }
-    public boolean checkFollowButtonState() {
+    public boolean checkFollowButtonState(String user) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        WebElement followUnfollowButton =driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button"));
+        WebElement followUnfollowButton =driver.findElement
+                (By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user)));
         wait.until(ExpectedConditions.visibilityOf(followUnfollowButton));
-        String actualButtonText = driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button")).getText();
+        String actualButtonText = driver.findElement
+                (By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user))).getText();
         String buttonText = "Follow";
             if (actualButtonText.equals(buttonText)) {
                 return true;
@@ -87,11 +86,13 @@ public class Header {
                 followUnfollowButton.click();}
         return true;
     }
-    public boolean checkUnFollowButtonState() {
+    public boolean checkUnFollowButtonState(String user) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        WebElement followUnfollowButton =driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button"));
+        WebElement followUnfollowButton =driver.findElement
+                (By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user)));
 
-        String actualButtonText = driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button")).getText();
+        String actualButtonText = driver.findElement
+                (By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user))).getText();
         String buttonText = "Unfollow";
         if (actualButtonText.equals(buttonText)) {
             return true;
@@ -100,20 +101,19 @@ public class Header {
             followUnfollowButton.click();}
         return true;
     }
-    public String followButtonText() {
+    public String followButtonText(String user) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        WebElement followButtonText = driver.findElement(By.xpath(".//a[text()='Lora']/parent::div/parent::div//button"));
+        WebElement followButtonText = driver.findElement
+                (By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user)));
         return followButtonText.getText();
     }
-    public String userText() {
-        WebElement userText = driver.findElement(By.xpath("//a[text()='Lora']"));
-
+    public String userText(String user) {
+        WebElement userText = driver.findElement(By.linkText(String.format("%s",user)));
         return userText.getText();
     }
     public boolean searchBar(){return(driver.findElement(By.id("search-bar")).isDisplayed());}
     public boolean dropDownContainer(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         return(driver.findElement(By.className("dropdown-container")).isDisplayed());
     }
 
@@ -123,6 +123,7 @@ public class Header {
         String generatedString = new String(array, Charset.forName("UTF-8"));
         return generatedString;
     }
+
 
 
 

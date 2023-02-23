@@ -15,16 +15,13 @@ public class SearchFieldTests extends ConfigClass{
 
     @DataProvider(name = "getUsers")
     public Object[][] getUsers() {
-        return new Object[][]{{"m_puh", "metodi86"}, //login with username
-                {"testMail1@gmail.com", "Dimitar1.Tarkalanov1"}, //login with email
-                {"testAdmin@gmail.com", "Admin1.User1"}, //login with admin user
-                {"manager@gmail.com", "Manager1.Use1"} //login with manager user
+        return new Object[][]{{"m_puh", "metodi86", "Lora"}, //login with username
         };
     }
 
     //REQ-1.1: The search field is available only for the logged users.
     @Test(dataProvider = "getUsers")
-    public void testVisibilityOfSearchBarAfterLogin(String username, String password) {
+    public void testVisibilityOfSearchBarAfterLogin(String username, String password, String user) {
         WebDriver driver = getDriver();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.logIn(username,password);
@@ -36,7 +33,7 @@ public class SearchFieldTests extends ConfigClass{
 
     //REQ-2: Clicking in the search field and pressing space shows all available users.
     @Test(retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testShowAllUsersInSearchField(String username, String password) {
+    public void testShowAllUsersInSearchField(String username, String password, String user) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -53,7 +50,7 @@ public class SearchFieldTests extends ConfigClass{
     //REQ-4: The results shown contains the profile picture, the name of the user and Follow/Unfollow button.
     //REQ-5: Clicking on the profile picture or name opens the user’s profile page.
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testSearchFieldFindUserOnHomePage(String username, String password) {
+    public void testSearchFieldFindUserOnHomePage(String username, String password, String user) {
                WebDriver driver = getDriver();
                LoginPage loginPage = new LoginPage(driver);
                loginPage.logIn(username,password);
@@ -61,13 +58,13 @@ public class SearchFieldTests extends ConfigClass{
                Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home URL is not correct!");
 
                Header header = new Header(driver);
-               header.findUser();
-               Assert.assertEquals(header.userText(),"Lora");
+               header.findUser(user);
+               Assert.assertEquals(header.userText(user),user);
 
            }
 
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testSearchFieldOnProfilePage(String username, String password) {
+    public void testSearchFieldOnProfilePage(String username, String password, String user) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -77,7 +74,7 @@ public class SearchFieldTests extends ConfigClass{
         Header header = new Header(driver);
         header.clickProfile();
 
-        header.findUserAndSelect();
+        header.findUserAndSelect(user);
 
         UserProfilePage userProfilePage = new UserProfilePage(driver);
         Assert.assertTrue(userProfilePage.isUrlLoaded(), "The Home URL is not correct!");
@@ -85,7 +82,7 @@ public class SearchFieldTests extends ConfigClass{
 
     //REQ-6: Clicking Follow/Unfollow – follows or unfollows the relevant user
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testFollowUserInSearchField(String username, String password) {
+    public void testFollowUserInSearchField(String username, String password, String user) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -95,14 +92,15 @@ public class SearchFieldTests extends ConfigClass{
         loginPage.logIn(username,password);
         Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home Page URL is not correct!");
 
-        header.findUser();
-        header.checkFollowButtonState();
-        header.FollowUnfollow();
-        Assert.assertEquals( header.followButtonText(), "Unfollow","The user is not Followed!");
+        header.findUser(user);
+        header.checkFollowButtonState(user);
+        Assert.assertTrue(header.checkFollowButtonState(user));
+        header.followUnfollow(user);
+        Assert.assertEquals( header.followButtonText(user), "Unfollow","The user is not Followed!");
     }
 
     @Test (retryAnalyzer = RetryAnalyzer.class, dataProvider = "getUsers")
-    public void testUnFollowUserInSearchField(String username, String password) {
+    public void testUnFollowUserInSearchField(String username, String password, String user) {
         WebDriver driver = getDriver();
 
         LoginPage loginPage = new LoginPage(driver);
@@ -112,16 +110,16 @@ public class SearchFieldTests extends ConfigClass{
         loginPage.logIn(username,password);
         Assert.assertTrue(loggedHomePage.isUrlLoaded(), "The Home Page URL is not correct!");
 
-        header.findUser();
-        header.checkUnFollowButtonState();
-        Assert.assertTrue(header.checkUnFollowButtonState());
-        header.FollowUnfollow();
-        Assert.assertEquals( header.followButtonText(), "Follow","The user is not Unfollowed!");
+        header.findUser(user);
+        header.checkUnFollowButtonState(user);
+        Assert.assertTrue(header.checkUnFollowButtonState(user));
+        header.followUnfollow(user);
+        Assert.assertEquals( header.followButtonText(user), "Follow","The user is not Unfollowed!");
     }
 
     //REQ-9: If no results are found nothing is shown.
     @Test(dataProvider = "getUsers")
-    public void testNoResultsFoundInSearchField(String username, String password) {
+    public void testNoResultsFoundInSearchField(String username, String password, String user) {
                WebDriver driver = getDriver();
 
                LoginPage loginPage = new LoginPage(driver);

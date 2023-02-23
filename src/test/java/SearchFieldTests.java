@@ -1,4 +1,7 @@
-import iSkilloElements.*;
+import iSkillo.Elements.pageObject.Header;
+import iSkillo.Elements.pageObject.LoggedHomePage;
+import iSkillo.Elements.pageObject.LoginPage;
+import iSkillo.Elements.pageObject.UserProfilePage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;

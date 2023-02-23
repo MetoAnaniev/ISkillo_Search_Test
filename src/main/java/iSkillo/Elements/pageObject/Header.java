@@ -1,4 +1,4 @@
-package iSkilloElements;
+package iSkillo.Elements.pageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -111,7 +111,6 @@ public class Header {
 
         return userText.getText();
     }
-   // public WebElement searchField = driver.findElement(By.id("search-bar");
     public boolean searchBar(){return(driver.findElement(By.id("search-bar")).isDisplayed());}
     public boolean dropDownContainer(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

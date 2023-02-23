@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ISkillo_Search_Test(failed)">
+    <classes>
+      <class name="SearchFieldTests">
+        <methods>
+          <include name="testNoResultsFoundInSearchField" invocation-numbers="0 1"/>
+          <include name="setupTestSuite"/>
+          <include name="testShowAllUsersInSearchField" invocation-numbers="1"/>
+          <include name="tearDownTest"/>
+          <include name="testFollowUserInSearchField" invocation-numbers="0 1"/>
+          <include name="setUpTest"/>
+          <include name="testSearchFieldOnProfilePage" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- SearchFieldTests -->
+    </classes>
+  </test> <!-- ISkillo_Search_Test(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

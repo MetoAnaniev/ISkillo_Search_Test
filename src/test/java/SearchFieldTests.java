@@ -15,7 +15,8 @@ public class SearchFieldTests extends ConfigClass{
 
     @DataProvider(name = "getUsers")
     public Object[][] getUsers() {
-        return new Object[][]{{"m_puh", "metodi86", "Lora"}, //login with username
+        return new Object[][]{{"m_puh", "metodi86", "Lora"},//login with username
+                {"testAdmin@gmail.com", "Admin1.User1", "AdminUser"},
         };
     }
 

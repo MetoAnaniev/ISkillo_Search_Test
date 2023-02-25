@@ -16,7 +16,7 @@ public class LoggedHomePage {
     }
 
     public void navigateTo() {
-        this.driver.get(iSkillo.Elements.pageObject.LoggedHomePage.PAGE_URL);
+        this.driver.get(PAGE_URL);
     }
     public boolean isUrlLoaded() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

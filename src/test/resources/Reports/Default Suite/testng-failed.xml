@@ -5,11 +5,13 @@
     <classes>
       <class name="SearchFieldTests">
         <methods>
-          <include name="testUnFollowUserInSearchField" invocation-numbers="0"/>
-          <include name="testNoResultsFoundInSearchField" invocation-numbers="0"/>
+          <include name="testNoResultsFoundInSearchField" invocation-numbers="0 1"/>
           <include name="setupTestSuite"/>
+          <include name="testShowAllUsersInSearchField" invocation-numbers="1"/>
           <include name="tearDownTest"/>
+          <include name="testFollowUserInSearchField" invocation-numbers="0 1"/>
           <include name="setUpTest"/>
+          <include name="testSearchFieldOnProfilePage" invocation-numbers="1"/>
         </methods>
       </class> <!-- SearchFieldTests -->
     </classes>

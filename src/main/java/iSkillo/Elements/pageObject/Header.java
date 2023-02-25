@@ -67,7 +67,8 @@ public class Header {
 
     public void followUnfollow(String user) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-        WebElement followUnfollowButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user))));
+        WebElement followUnfollowButton = wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath(String.format(".//a[text()='%s']/parent::div/parent::div//button",user))));
         followUnfollowButton.click();
 
     }

@@ -39,5 +39,17 @@ public class LoginPage {
     public void populateUsername(String username) {
         usernameField.sendKeys(username);
     }
-
+    public void navigateTo() {
+        this.driver.get(iSkillo.Elements.pageObject.LoginPage.PAGE_URL);
+    }
+    public void logIn (String username, String password) {
+        navigateTo();
+        populateUsername(username);
+        populatePassword(password);
+        clickSignIn();
+    }
+    public boolean isUrlLoaded() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        return wait.until(ExpectedConditions.urlToBe(iSkillo.Elements.pageObject.LoginPage.PAGE_URL));
+    }
 }

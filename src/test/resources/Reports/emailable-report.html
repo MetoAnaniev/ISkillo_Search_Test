@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Default Suite</th></tr>
+<tr><td><a href="#t0">ISkillo_Search_Test</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">4</td><td class="num attn">4</td><td class="num">348 291</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ISkillo_Search_Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">SearchFieldTests</td><td><a href="#m0">testFollowUserInSearchField</a></td><td rowspan="1">1677184330408</td><td rowspan="1">23241</td></tr><tr class="failedeven"><td><a href="#m1">testNoResultsFoundInSearchField</a></td><td rowspan="2">1677184381293</td><td rowspan="2">12015</td></tr><tr class="failedeven"><td><a href="#m2">testNoResultsFoundInSearchField</a></td></tr><tr class="failedeven"><td><a href="#m3">testShowAllUsersInSearchField</a></td><td rowspan="1">1677184552893</td><td rowspan="1">12227</td></tr><tr><th colspan="4">ISkillo_Search_Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="4">SearchFieldTests</td><td><a href="#m4">testFollowUserInSearchField</a></td><td rowspan="2">1677184305849</td><td rowspan="2">22475</td></tr><tr class="retriedeven"><td><a href="#m5">testFollowUserInSearchField</a></td></tr><tr class="retriedeven"><td><a href="#m6">testSearchFieldOnProfilePage</a></td><td rowspan="1">1677184444408</td><td rowspan="1">22105</td></tr><tr class="retriedeven"><td><a href="#m7">testShowAllUsersInSearchField</a></td><td rowspan="1">1677184527617</td><td rowspan="1">23283</td></tr><tr><th colspan="4">ISkillo_Search_Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="10">SearchFieldTests</td><td><a href="#m8">testFollowUserInSearchField</a></td><td rowspan="1">1677184293696</td><td rowspan="1">10060</td></tr><tr class="passedeven"><td><a href="#m9">testSearchFieldFindUserOnHomePage</a></td><td rowspan="2">1677184395559</td><td rowspan="2">8759</td></tr><tr class="passedeven"><td><a href="#m10">testSearchFieldFindUserOnHomePage</a></td></tr><tr class="passedeven"><td><a href="#m11">testSearchFieldOnProfilePage</a></td><td rowspan="2">1677184468545</td><td rowspan="2">26306</td></tr><tr class="passedeven"><td><a href="#m12">testSearchFieldOnProfilePage</a></td></tr><tr class="passedeven"><td><a href="#m13">testShowAllUsersInSearchField</a></td><td rowspan="1">1677184496908</td><td rowspan="1">28504</td></tr><tr class="passedeven"><td><a href="#m14">testUnFollowUserInSearchField</a></td><td rowspan="2">1677184567417</td><td rowspan="2">9837</td></tr><tr class="passedeven"><td><a href="#m15">testUnFollowUserInSearchField</a></td></tr><tr class="passedeven"><td><a href="#m16">testVisibilityOfSearchBarAfterLogin</a></td><td rowspan="2">1677184605100</td><td rowspan="2">16723</td></tr><tr class="passedeven"><td><a href="#m17">testVisibilityOfSearchBarAfterLogin</a></td></tr></tbody>
+</table>
+<h2>ISkillo_Search_Test</h2><h3 id="m0">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
+	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">SearchFieldTests#testNoResultsFoundInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;http://training.skillo-bg.com:4300/posts/all&quot;. Current url: &quot;http://training.skillo-bg.com:4300/users/login&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52377}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52377/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51241ac5b6af9cc99f11e769ea91fa5f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at iSkillo.Elements.pageObject.LoggedHomePage.isUrlLoaded(LoggedHomePage.java:22)
+	at SearchFieldTests.testNoResultsFoundInSearchField(SearchFieldTests.java:129)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">SearchFieldTests#testNoResultsFoundInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dropdown\-container&quot;}
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ed4caa802c8e98b4c8635e16c8cb7593, findElement {using=class name, value=dropdown-container}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52304}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52304/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ed4caa802c8e98b4c8635e16c8cb7593
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at iSkillo.Elements.pageObject.Header.dropDownContainer(Header.java:118)
+	at SearchFieldTests.testNoResultsFoundInSearchField(SearchFieldTests.java:132)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">SearchFieldTests#testShowAllUsersInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be &quot;http://training.skillo-bg.com:4300/posts/all&quot;. Current url: &quot;http://training.skillo-bg.com:4300/users/login&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52946}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52946/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c486302a18a5f4d46eaa1145aca55693
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at iSkillo.Elements.pageObject.LoggedHomePage.isUrlLoaded(LoggedHomePage.java:22)
+	at SearchFieldTests.testShowAllUsersInSearchField(SearchFieldTests.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: The user is not Followed! expected [Unfollow] but found [Follow]
+	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b14028c0e068818df6eb1dccd2ee2e6, isElementDisplayed {id=8554b016-ce63-420e-9e15-f121f5f959b1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52018}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52018/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0b14028c0e068818df6eb1dccd2ee2e6)] -&gt; xpath: .//a[text()=&apos;Lora&apos;]/parent::div/parent::div//button]
+Session ID: 0b14028c0e068818df6eb1dccd2ee2e6
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at iSkillo.Elements.pageObject.Header.checkFollowButtonState(Header.java:79)
+	at SearchFieldTests.testFollowUserInSearchField(SearchFieldTests.java:97)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">SearchFieldTests#testSearchFieldOnProfilePage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ecbf457c763e0898c586b235b73b9710, clickElement {id=01b6f09d-8717-43e6-b9f3-aeffe4513d95}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52654}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52654/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (ecbf457c763e0898c586b235b73b9710)] -&gt; link text: M_Puh]
+Session ID: ecbf457c763e0898c586b235b73b9710
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at iSkillo.Elements.pageObject.Header.findUserAndSelect(Header.java:65)
+	at SearchFieldTests.testSearchFieldOnProfilePage(SearchFieldTests.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">SearchFieldTests#testShowAllUsersInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dropdown\-container&quot;}
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e20137bfc3d82095c6abced882f251a8, findElement {using=class name, value=dropdown-container}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\metoa\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52877}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52877/devtoo..., se:cdpVersion: 110.0.5481.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e20137bfc3d82095c6abced882f251a8
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at iSkillo.Elements.pageObject.Header.dropDownContainer(Header.java:118)
+	at SearchFieldTests.testShowAllUsersInSearchField(SearchFieldTests.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">SearchFieldTests#testFollowUserInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">SearchFieldTests#testSearchFieldFindUserOnHomePage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">SearchFieldTests#testSearchFieldFindUserOnHomePage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">SearchFieldTests#testSearchFieldOnProfilePage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">SearchFieldTests#testSearchFieldOnProfilePage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">SearchFieldTests#testShowAllUsersInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">SearchFieldTests#testUnFollowUserInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">SearchFieldTests#testUnFollowUserInSearchField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">SearchFieldTests#testVisibilityOfSearchBarAfterLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>m_puh</td><td>metodi86</td><td>Lora</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">SearchFieldTests#testVisibilityOfSearchBarAfterLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>testAdmin@gmail.com</td><td>Admin1.User1</td><td>M_Puh</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

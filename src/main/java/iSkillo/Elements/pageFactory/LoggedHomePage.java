@@ -20,7 +20,7 @@ public class LoggedHomePage {
     }
     public boolean isUrlLoaded() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        return wait.until(ExpectedConditions.urlToBe(iSkillo.Elements.pageObject.LoggedHomePage.PAGE_URL));
+        return wait.until(ExpectedConditions.urlToBe(PAGE_URL));
 
     }
 }
